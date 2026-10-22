@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Daniel Bula — Painter, Maintenance Technician and Crew Leader. Approved direct vendor for Walt Disney World and Universal Orlando.">
+<meta property="og:title" content="Daniel Bula — Painter · Maintenance · Crew Leader">
+<meta property="og:description" content="Approved direct vendor for Walt Disney World and Universal Orlando. 7 roller coasters painted. Photos, videos and contact.">
+<meta property="og:image" content="https://www.danielbula.com/work/castle.jpg">
+<meta property="og:url" content="https://www.danielbula.com/work/">
+<meta property="og:type" content="profile">
+<link rel="icon" href="daniel.jpg">
+<title>Daniel Bula — Painter · Maintenance · Crew Leader</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: single column job-site portfolio — header card, video, numbers, gallery, skills, clients, companies, contact */
+:root{
+  --bg:#f3f6f4; --surface:#ffffff; --ink:#16231c; --muted:#5a6a61; --line:#d7e0da;
+  --pine:#2c4a3b; --pine-ink:#ffffff; --amber:#b9781c;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1712; --surface:#17221b; --ink:#e7eee9; --muted:#9db0a4; --line:#2a3a30;
+  --pine:#3f6b55; --pine-ink:#ffffff; --amber:#e3a548; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1712; --surface:#17221b; --ink:#e7eee9; --muted:#9db0a4; --line:#2a3a30;
+  --pine:#3f6b55; --pine-ink:#ffffff; --amber:#e3a548; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--body)}
+.wrap{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px;display:grid;gap:36px}
+.band{background:var(--pine);color:var(--pine-ink)}
+.band .inner{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.band img{width:120px;height:120px;border-radius:50%;border:4px solid #fff;object-fit:cover}
+.who{min-width:0;flex:1 1 300px}
+h1{font:700 clamp(40px,8vw,60px)/1 var(--display);margin:0;letter-spacing:.5px}
+.role{font:600 15px/1.3 var(--body);text-transform:uppercase;letter-spacing:1.5px;margin:8px 0 4px;opacity:.9}
+.ready{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.ready li{font-size:14px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.5)}
+.vendor{display:inline-block;margin-top:10px;background:var(--amber);color:#1a1205;font-weight:600;padding:4px 10px;border-radius:4px;font-size:15px}
+.where{margin:6px 0 0;opacity:.85;font-size:15px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--pine);color:var(--pine);background:var(--surface)}
+.btn.main{background:var(--pine);color:var(--pine-ink)}
+.btn:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+h2{font:700 30px/1.1 var(--display);margin:0 0 14px;text-transform:uppercase;letter-spacing:.5px;text-wrap:balance}
+.lede{color:var(--muted);margin:0 0 12px;max-width:65ch}
+.vwrap{display:grid;gap:6px;justify-items:center}
+.vwrap video{width:100%;max-width:380px;aspect-ratio:9/16;max-height:640px;border-radius:8px;background:#000;display:block}
+.vcap{margin:0;color:var(--muted);font-size:15px;text-align:center}
+.video{aspect-ratio:16/9;max-width:100%;border:2px dashed var(--line);border-radius:8px;display:grid;place-items:center;color:var(--muted);background:var(--surface);text-align:center;padding:16px}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.num{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px}
+.num b{display:block;font:700 40px/1 var(--display);color:var(--pine)}
+:root[data-theme="dark"] .num b{color:var(--amber)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .num b{color:var(--amber)}}
+.num span{color:var(--muted);font-size:15px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ph{aspect-ratio:3/4;max-width:100%;border:2px dashed var(--line);border-radius:6px;display:grid;place-items:center;color:var(--muted);font-size:14px;background:var(--surface)}
+.shot{margin:0;display:grid;gap:6px;min-width:0;align-content:start}
+.shot img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:6px;display:block;max-width:100%}
+.shot.wide{grid-column:1/-1}
+.shot.wide img{aspect-ratio:16/9}
+.shot figcaption{font-size:14px;color:var(--muted)}
+.rows{display:grid;gap:22px}
+.rowhead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.rowhead h3{margin:0;font:700 22px/1.1 var(--display);text-transform:uppercase;letter-spacing:.5px}
+.rowhead span{color:var(--muted);font-size:15px}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:min(78%,340px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.card{margin:0;scroll-snap-align:start;display:grid;gap:6px;min-width:0}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block}
+.card figcaption{font-size:14px;color:var(--muted)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.clients{display:grid;gap:0;border-top:1px solid var(--line)}
+.clients div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.clients div span:last-child{color:var(--muted);font-size:15px}
+.cos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.co{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;min-width:0}
+.co h3{margin:0 0 4px;font:700 20px/1.1 var(--display)}
+.co p{margin:0 0 8px;color:var(--muted);font-size:15px}
+.co a{color:var(--pine);font-weight:600}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px;display:grid;gap:12px}
+.contact p{margin:0}
+.sel{user-select:all;font-weight:600}
+.cols.three{grid-template-columns:repeat(3,1fr)}
+.cols.three h2{font-size:24px}
+@media (max-width:640px){.cols.three{grid-template-columns:1fr}.nums,.gallery,.cos,.cols{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}}
+</style>
+<style>html,body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+
+<header class="band">
+  <div class="inner">
+    <img src="daniel.jpg" alt="Daniel Bula">
+    <div class="who">
+      <h1>Daniel Bula</h1>
+      <div class="role">Painter · Maintenance Technician · Crew Leader</div>
+      <div class="vendor">Approved direct vendor · Walt Disney World &amp; Universal Orlando</div>
+      <p class="where">Painted 7 roller coasters for Disney, Universal and SeaWorld.</p>
+      <ul class="ready"><li>Own pickup truck</li><li>Valid driver's license</li><li>Own tools</li><li>All paperwork in order</li></ul>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="cta" style="margin-top:20px">
+    <a class="btn main" href="tel:+14079073287">Call (407) 907-3287</a>
+    <a class="btn" href="https://wa.me/14079073287" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn" href="https://vimeo.com/showcase/11121826" target="_blank" rel="noopener">Videos</a>
+    <a class="btn" href="https://www.linkedin.com/in/danielbulaceo" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View resume (PDF)</a>
+  </div>
+
+  <section>
+    <h2>See my work</h2>
+    <div class="vwrap"><video src="walk.mp4" poster="castle.jpg" autoplay muted loop playsinline controls aria-label="Two AVCS company vans on Main Street, Magic Kingdom, at night"></video><p class="vcap">My AVCS vans on Main Street, Magic Kingdom, before a night shift.</p><a class="btn main" href="https://vimeo.com/showcase/11121826" target="_blank" rel="noopener">Watch all my project videos</a></div>
+  </section>
+
+  <section class="nums">
+    <div class="num"><b>15+</b><span>years painting residential, commercial and industrial</span></div>
+    <div class="num"><b>7</b><span>roller coasters painted with epoxy for Disney, Universal and SeaWorld</span></div>
+    <div class="num"><b>100+</b><span>workers on my crews at Universal Epic Universe</span></div>
+  </section>
+
+  <section>
+    <h2>My work</h2>
+    <p class="lede">Swipe each row to see more.</p>
+    <div class="rows">
+      <div class="row"><div class="rowhead"><h3>Roller coasters &amp; rides</h3><span>7 coasters painted for Disney, Universal and SeaWorld</span></div><div class="strip"><figure class="card"><img src="c_epic.jpg" alt="Daniel's crew at the Mine-Cart Madness coaster in Epic Universe" loading="lazy"><figcaption>My crew at Mine-Cart Madness · Universal Epic Universe</figcaption></figure><figure class="card"><img src="c_hulk.jpg" alt="Daniel's painting crew in front of the Incredible Hulk roller coaster" loading="lazy"><figcaption>My crew at the Incredible Hulk Coaster · Universal</figcaption></figure><figure class="card"><img src="u3.jpg" alt="Worker in a harness on a boom lift painting a roller coaster at night" loading="lazy"><figcaption>Coaster work at night from the lift, harness on</figcaption></figure><figure class="card"><img src="c_trolls2.jpg" alt="Painter on a ladder at night next to the Trolls roller coaster track" loading="lazy"><figcaption>Night painting at the Trolls coaster · Universal</figcaption></figure><figure class="card"><img src="c_dumbo.jpg" alt="Crew painting the railings of the Dumbo attraction at night" loading="lazy"><figcaption>Painting ride railings · Dumbo, Magic Kingdom</figcaption></figure></div></div>
+      <div class="row"><div class="rowhead"><h3>Leadership, training &amp; safety</h3><span>My own company · 100+ workers on my crews at Universal Epic Universe</span></div><div class="strip"><figure class="card"><img src="train1.jpg" alt="Daniel Bula with a crew he trained in boom lift, scissor lift and fall protection" loading="lazy"><figcaption>Daniel (center) with a crew he trained and certified: boom lift, scissor lift, harnesses, OSHA safety</figcaption></figure><figure class="card"><img src="cr2.jpg" alt="Crew reviewing a site plan with work priorities" loading="lazy"><figcaption>Reading the site plan and setting priorities with the team</figcaption></figure><figure class="card"><img src="cr3.jpg" alt="Morning safety meeting with the crew" loading="lazy"><figcaption>Morning safety talk before the shift</figcaption></figure><figure class="card"><img src="cr1.jpg" alt="AVCS crew of over 20 at Super Nintendo World, Epic Universe" loading="lazy"><figcaption>Part of my crew at Epic Universe, Universal</figcaption></figure><figure class="card"><img src="p01.jpg" alt="Daniel on a night shift at Magic Kingdom" loading="lazy"><figcaption>Daniel on a night shift at Magic Kingdom · 2015</figcaption></figure></div></div>
+      <div class="row"><div class="rowhead"><h3>Theme park painting</h3><span>Walt Disney World and Universal Orlando</span></div><div class="strip"><figure class="card"><img src="t_mkx.jpg" alt="Crew repainting a building exterior at night at Magic Kingdom" loading="lazy"><figcaption>Exterior building repaint at night · Magic Kingdom</figcaption></figure><figure class="card"><img src="t_toy.jpg" alt="Crew repainting ride columns at Toy Story Land" loading="lazy"><figcaption>Repainting a ride area · Toy Story Land, Hollywood Studios</figcaption></figure><figure class="card"><img src="t_shrek.jpg" alt="Crew doing scenic painting on a themed wooden sign at Universal" loading="lazy"><figcaption>Scenic painting on themed signage · Shrek area, Universal</figcaption></figure><figure class="card"><img src="mk_a.jpg" alt="Night exterior repaint with boom lift at Magic Kingdom" loading="lazy"><figcaption>Night exterior repaint, Liberty Square · Magic Kingdom</figcaption></figure><figure class="card"><img src="mk_d.jpg" alt="Finished building facade at night" loading="lazy"><figcaption>Finished: Liberty Square Ticket Office</figcaption></figure><figure class="card"><img src="t_rail.jpg" alt="AVCS crew repainting metal railings at night" loading="lazy"><figcaption>Repainting metal railings at night · Magic Kingdom</figcaption></figure></div></div>
+      <div class="row"><div class="rowhead"><h3>Maintenance &amp; repairs</h3><span>Resorts, hotel rooms, utility rooms, gutters</span></div><div class="strip"><figure class="card"><img src="p04.jpg" alt="Crew inspecting moisture damage behind hotel wallpaper" loading="lazy"><figcaption>Opening a wall to find and fix moisture damage</figcaption></figure><figure class="card"><img src="p05.jpg" alt="Daniel on site at a Walt Disney World resort" loading="lazy"><figcaption>Daniel on site at Disney's Art of Animation Resort</figcaption></figure><figure class="card"><img src="mt1.jpg" alt="Crew member on a ladder doing maintenance painting near an electrical panel" loading="lazy"><figcaption>Maintenance painting in a utility room</figcaption></figure><figure class="card"><img src="p08.jpg" alt="AVCS night crew installing gutters on a canopy" loading="lazy"><figcaption>Night crew installing gutters on a canopy</figcaption></figure></div></div>
+      <div class="row"><div class="rowhead"><h3>Commercial, lifts &amp; demolition</h3><span>Stores, exteriors, offices</span></div><div class="strip"><figure class="card"><img src="p07.jpg" alt="Boom lift exterior work at night at a Publix store" loading="lazy"><figcaption>Night exterior work on a boom lift · Publix</figcaption></figure><figure class="card"><img src="c_trolls.jpg" alt="Crew working from a boom lift and ladders inside a ride building at Universal" loading="lazy"><figcaption>Boom lift and ladder crew inside a ride building · Universal</figcaption></figure><figure class="card"><img src="p06.jpg" alt="Crew removing office cubicles" loading="lazy"><figcaption>Clearing an office before renovation</figcaption></figure></div></div>
+    </div>
+  </section>
+
+  <section class="cols three">
+    <div>
+      <h2>Painting &amp; coatings</h2>
+      <ul>
+        <li>Every type of painting: residential, commercial, industrial and decorative</li>
+        <li>Epoxy and high-performance coatings on rides and steel</li>
+        <li>Spray, brush and roller; interior and exterior</li>
+        <li>Textures: popcorn, orange peel, knockdown — apply and remove</li>
+        <li>Stucco work</li>
+        <li>Wallpaper installation and removal</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Maintenance &amp; repair</h2>
+      <ul>
+        <li>Drywall: remove, hang, patch and finish</li>
+        <li>Water and moisture damage repairs in hotel rooms</li>
+        <li>Demolition, insulation and debris removal</li>
+        <li>Basic wood framing and carpentry</li>
+        <li>Gutter installation</li>
+        <li>Basic electrical: fixtures, outlets, switches</li>
+        <li>Basic residential plumbing and HVAC filter care</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Leadership &amp; safety</h2>
+      <ul>
+        <li>Supervised hotel maintenance crews and kept work-order history</li>
+        <li>Trainer: I train and certify my own workers on boom lift, scissor lift and fall-protection harnesses</li>
+        <li>Painting trainer and crew recruiter</li>
+        <li>Delivered projects on schedule with general contractors</li>
+        <li>OSHA safety: harnesses, PPE, fall protection</li>
+        <li>Licensed operator: forklift, scissor lift and boom lift</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Where I've worked</h2>
+    <div class="clients">
+      <div><span>Walt Disney World Resort</span><span>Magic Kingdom, EPCOT, Hollywood Studios, Animal Kingdom, resorts</span></div>
+      <div><span>NBCUniversal</span><span>Universal Studios, Islands of Adventure, Volcano Bay, CityWalk</span></div>
+      <div><span>S-Mart Inc.</span><span>Epic Universe and theme parks</span></div>
+      <div><span>Performance Painting Contractors</span><span>Shops, airports, schools</span></div>
+      <div><span>Specialized Property Services</span><span>Home Depot stores and schools across Florida</span></div>
+      <div><span>Servpro · Belfor · Blue Team</span><span>Property restoration</span></div>
+      <div><span>Painters USA</span><span>Painting and labor nationwide</span></div>
+      <div><span>Epic Painting</span><span>UCF campus and apartment communities</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>My companies</h2>
+    <div class="cos">
+      <div class="co"><h3>AVCS Contractors Services</h3><p>Owner since 2016. Commercial and industrial painting, high-performance coatings and theme park refurbishment for Universal, Disney, Publix, Belfor and Servpro.</p></div>
+      <div class="co"><h3>Workforce Nationwide Solutions</h3><p>President since 2025. Skilled crews for construction, hospitality and theme parks.</p></div>
+      <div class="co"><h3>Bula Work</h3><p>Founder. My app for the trades: workers, subcontractors, companies and homeowners.</p><a href="https://apps.apple.com/app/id6798387169" target="_blank" rel="noopener">App Store</a> · <a href="https://play.google.com/store/apps/details?id=us.bulawork.app" target="_blank" rel="noopener">Google Play</a></div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2 style="margin:0">Let's talk</h2>
+    <p>Full-time, year-round, including weekends. Own pickup truck, valid driver's license, own tools, all paperwork in order.</p>
+    <p><strong>Languages:</strong> Spanish (native). English 8/10 — fluent in the language of the job: work orders, materials, safety and schedules.</p>
+    <p>Phone: <span class="sel">(407) 907-3287</span></p>
+    <p>Email: <span class="sel">info@danielbula.com</span></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/danielbulaceo" target="_blank" rel="noopener">linkedin.com/in/danielbulaceo</a></p>
+  </section>
+</main>
+
+</body>
+</html>
